@@ -99,10 +99,10 @@ public class Signup_positive_scenario extends Generic_functions{
 			click("signup_terms_and_conditions");
 			page_wait(10);
 			click("signup");
-			Thread.sleep(1000);
-			value1=driver.findElement(By.xpath(OR_reader( "otp_1"))).isDisplayed();
-			Assert.assertEquals(true,value1);
-			page_wait(20);
+// 			Thread.sleep(1000);
+// 			value1=driver.findElement(By.xpath(OR_reader( "otp_1"))).isDisplayed();
+// 			Assert.assertEquals(true,value1);
+// 			page_wait(20);
 		} catch (Exception e) {
 			e.printStackTrace();
 			takeScreenShot("signup_positive_tc_005");
@@ -112,22 +112,22 @@ public class Signup_positive_scenario extends Generic_functions{
 	/*User entering otp*/
 	@Then("user enters otp and clicks on verify button and is navigated to the login page")
 	public void signup_positive_tc_006() throws Exception {
-		try {
-			page_wait(40);
-			driver.findElement(By.xpath(OR_reader("otp_1"))).sendKeys(td_reader("otp_1"));
-			driver.findElement(By.xpath(OR_reader("otp_2"))).sendKeys(td_reader("otp_2"));
-			driver.findElement(By.xpath(OR_reader("otp_3"))).sendKeys(td_reader("otp_3"));
-			driver.findElement(By.xpath(OR_reader("otp_4"))).sendKeys(td_reader("otp_4"));
-			page_wait(15);
-			click("otp_verify");
-			page_wait(10);
-			value1=driver.findElement(By.xpath(OR_reader( "welcome_page_title"))).isDisplayed();
-			Assert.assertEquals(true,value1);
-			close();
-		} catch (Exception e) {
-			e.printStackTrace();
-			takeScreenShot("signup_positive_tc_006");
-		}
+// 		try {
+// 			page_wait(40);
+// 			driver.findElement(By.xpath(OR_reader("otp_1"))).sendKeys(td_reader("otp_1"));
+// 			driver.findElement(By.xpath(OR_reader("otp_2"))).sendKeys(td_reader("otp_2"));
+// 			driver.findElement(By.xpath(OR_reader("otp_3"))).sendKeys(td_reader("otp_3"));
+// 			driver.findElement(By.xpath(OR_reader("otp_4"))).sendKeys(td_reader("otp_4"));
+// 			page_wait(15);
+// 			click("otp_verify");
+// 			page_wait(10);
+// 			value1=driver.findElement(By.xpath(OR_reader( "welcome_page_title"))).isDisplayed();
+// 			Assert.assertEquals(true,value1);
+// 			close();
+// 		} catch (Exception e) {
+// 			e.printStackTrace();
+// 			takeScreenShot("signup_positive_tc_006");
+// 		}
 		
 	}
 	
